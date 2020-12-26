@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /*
  * Sourceman, the easiest way to manage software versioning!
  * Copyright (C) 2020  BadBoyHaloCat
@@ -16,3 +15,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
+
+import inquirer from 'inquirer';
+import { program } from 'commander';
+
+// Subcommands
+import config from './config/config';
+config();
+
+// Parse arguments
+program.parse(process.argv);
