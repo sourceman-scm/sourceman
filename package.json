@@ -28,6 +28,7 @@
         "cleanDist": "rm -rf dist/*",
         "copyBin": "copyfiles -f src/bin/* dist/bin/",
         "build": "yarn cleanDist && yarn copyBin && tsc",
-        "format": "prettier . -w"
+        "format": "prettier . -w",
+        "installLocal": "yarn build && yarn global add \"file:$(pwd)\""
     }
 }

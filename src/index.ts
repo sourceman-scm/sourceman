@@ -20,8 +20,8 @@ import inquirer from 'inquirer';
 import { program } from 'commander';
 
 // Subcommands
-import config from './config/config';
-config();
+program
+    .command('config', 'Manage Sourceman configuration')
 
 // Parse arguments
 program.parse(process.argv);
